@@ -1,0 +1,2353 @@
+/*!
+Theme Name: wp-beirut
+Theme URI: http://underscores.me/
+Author: Wordpress Beirut Community
+Author URI: http://www.wpbeirut.org
+Description: From Beirut with love - Wordpress Beirut Community
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: wp-beirut
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+wp-beirut is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+	 ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+	line-height: 1.15; /* 1 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+	 ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+	margin: 0;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+/* Grouping content
+	 ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+	box-sizing: content-box; /* 1 */
+	height: 0; /* 1 */
+	overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+	font-family: monospace, monospace; /* 1 */
+	font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+	 ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+	background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+	border-bottom: none; /* 1 */
+	text-decoration: underline; /* 2 */
+	text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+	font-family: monospace, monospace; /* 1 */
+	font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+	font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+/* Embedded content
+	 ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+	border-style: none;
+}
+
+/* Forms
+	 ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit; /* 1 */
+	font-size: 100%; /* 1 */
+	line-height: 1.15; /* 1 */
+	margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+	overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+	text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+	padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *		`fieldset` elements in all browsers.
+ */
+
+legend {
+	box-sizing: border-box; /* 1 */
+	color: inherit; /* 2 */
+	display: table; /* 1 */
+	max-width: 100%; /* 1 */
+	padding: 0; /* 3 */
+	white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+	vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+	overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+	box-sizing: border-box; /* 1 */
+	padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+	-webkit-appearance: textfield; /* 1 */
+	outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button; /* 1 */
+	font: inherit; /* 2 */
+}
+
+/* Interactive
+	 ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+	display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+	display: list-item;
+}
+
+/* Misc
+	 ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+	display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+	display: none;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: #404040;
+	font-family: sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code, kbd, tt, var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: #fff;
+	/* Fallback for when there is no custom background color defined. */
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul, ol {
+	margin: 0 0 1.5em 3em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0;
+	/* Extra wide images within figure tags don't overflow the content area. */
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: #ccc #ccc #bbb;
+	border-radius: 3px;
+	background: #e6e6e6;
+	color: rgba(0, 0, 0, 0.8);
+	font-size: 12px;
+	font-size: 0.75rem;
+	line-height: 1;
+	padding: .6em 1em .4em;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa;
+}
+
+button:active, button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+	border-color: #aaa #bbb #bbb;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+select {
+	border: 1px solid #ccc;
+}
+
+textarea {
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+	color: royalblue;
+}
+
+a:visited {
+	color: purple;
+}
+
+a:hover, a:focus, a:active {
+	color: midnightblue;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover, a:active {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 100%;
+	left: -999em;
+	z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: 100%;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation li {
+	float: left;
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+	/* Make sure select elements fit in widgets. */
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+	/* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+
+/*--------------------------------------------------------------
+1.0 Normalize
+--------------------------------------------------------------*/
+/* line 1, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+/* line 7, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+body {
+  margin: 0; }
+
+/* line 22, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+  display: block; }
+
+/* line 29, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+/* line 34, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/* line 40, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+[hidden], template {
+  display: none; }
+
+/* line 44, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+a {
+  background-color: transparent; }
+
+/* line 49, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+a:active, a:hover {
+  outline: 0; }
+
+/* line 53, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/* line 58, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+b, strong {
+  font-weight: bold; }
+
+/* line 62, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+dfn {
+  font-style: italic; }
+
+/* line 66, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* line 71, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/* line 76, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+small {
+  font-size: 80%; }
+
+/* line 81, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 88, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+sup {
+  top: -0.5em; }
+
+/* line 92, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+sub {
+  bottom: -0.25em; }
+
+/* line 96, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+img {
+  border: 0; }
+
+/* line 100, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* line 104, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+figure {
+  margin: 1em 40px; }
+
+/* line 108, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/* line 113, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+pre {
+  overflow: auto; }
+
+/* line 120, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* line 129, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+/* line 135, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+button {
+  overflow: visible; }
+
+/* line 140, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+button, select {
+  text-transform: none; }
+
+/* line 147, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+/* line 153, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+/* line 158, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* line 163, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+input {
+  line-height: normal; }
+
+/* line 168, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+/* line 174, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/* line 178, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; }
+
+/* line 184, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/* line 188, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/* line 194, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+legend {
+  border: 0;
+  padding: 0; }
+
+/* line 199, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+textarea {
+  overflow: auto; }
+
+/* line 203, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+optgroup {
+  font-weight: bold; }
+
+/* line 207, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 213, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/normalize */
+td, th {
+  padding: 0; }
+
+/*--------------------------------------------------------------
+CUSTOM VARS & MIXINS
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+2.0 Typography
+--------------------------------------------------------------*/
+/* line 5, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/typography/typography */
+body, button, input, select, textarea {
+  color: #505050;
+  font-family: Raleway, "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.618em; }
+
+/* line 1, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/typography/headings */
+h1, h2, h3, h4, h5, h6 {
+  clear: both; }
+
+/* line 1, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/typography/copy */
+p {
+  margin-bottom: 1.5em; }
+
+/* line 5, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/typography/copy */
+b, strong {
+  font-weight: bold; }
+
+/* line 9, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/typography/copy */
+dfn, cite, em, i {
+  font-style: italic; }
+
+/* line 13, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/typography/copy */
+blockquote {
+  margin: 0 1.5em; }
+
+/* line 17, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/typography/copy */
+address {
+  margin: 0 0 1.5em; }
+
+/* line 21, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/typography/copy */
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 1.618em;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em; }
+
+/* line 32, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/typography/copy */
+code, kbd, tt, var {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 15px;
+  font-size: 0.9375rem; }
+
+/* line 37, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/typography/copy */
+abbr, acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help; }
+
+/* line 42, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/typography/copy */
+mark, ins {
+  background: #fff9c0;
+  text-decoration: none; }
+
+/* line 47, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/typography/copy */
+small {
+  font-size: 75%; }
+
+/* line 51, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/typography/copy */
+big {
+  font-size: 125%; }
+
+/*--------------------------------------------------------------
+3.0 Elements
+--------------------------------------------------------------*/
+/* line 1, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/elements/elements */
+html {
+  box-sizing: border-box; }
+
+/* line 7, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/elements/elements */
+*, *:before, *:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit; }
+
+/* line 11, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/elements/elements */
+body {
+  background: #ebe8e5
+  /* Fallback for when there is no custom background color defined. */ }
+
+/* line 16, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/elements/elements */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: ""; }
+
+/* line 20, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/elements/elements */
+blockquote, q {
+  quotes: "" ""; }
+
+/* line 24, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/elements/elements */
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em; }
+
+/* line 1, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/elements/lists */
+ul, ol {
+  margin: 0 0 1.5em 3em; }
+
+/* line 5, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/elements/lists */
+ul {
+  list-style: disc; }
+
+/* line 9, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/elements/lists */
+ol {
+  list-style: decimal; }
+
+/* line 14, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/elements/lists */
+li > ul, li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5em; }
+
+/* line 19, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/elements/lists */
+dt {
+  font-weight: bold; }
+
+/* line 23, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/elements/lists */
+dd {
+  margin: 0 1.5em 1.5em; }
+
+/* line 33, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/elements/elements */
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%
+  /* Adhere to container width. */ }
+
+/* line 1, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/elements/tables */
+table {
+  margin: 0 0 1.5em;
+  width: 100%; }
+
+/*--------------------------------------------------------------
+4.0 Forms
+--------------------------------------------------------------*/
+/* line 4, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/forms/buttons */
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  border: 1px solid;
+  border-color: #ccc #ccc #bbb;
+  border-radius: 3px;
+  background: #e6e6e6;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 0.6em 1em 0.4em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
+
+/* line 20, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/forms/buttons */
+button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
+  border-color: #ccc #bbb #aaa;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
+
+/* line 32, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/forms/buttons */
+button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus, button:active, input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:active {
+  border-color: #aaa #bbb #bbb;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
+
+/* line 6, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/forms/fields */
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea {
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 3px; }
+
+/* line 17, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/forms/fields */
+input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, textarea:focus {
+  color: #111; }
+
+/* line 25, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/forms/fields */
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"] {
+  padding: 3px; }
+
+/* line 29, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/forms/fields */
+textarea {
+  padding-left: 3px;
+  width: 100%; }
+
+/*--------------------------------------------------------------
+5.0 Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+5.1 Links
+--------------------------------------------------------------*/
+/* line 1, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/links */
+a {
+  color: #7b6e62; }
+  /* line 4, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/links */
+  a:visited {
+    color: #7b6e62; }
+  /* line 9, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/links */
+  a:hover, a:focus, a:active {
+    color: #7b6e62; }
+  /* line 12, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/links */
+  a:focus {
+    outline: thin dotted; }
+  /* line 16, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/links */
+  a:hover, a:active {
+    outline: 0; }
+
+/*--------------------------------------------------------------
+5.2 Menus
+--------------------------------------------------------------*/
+/* line 2, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/menus */
+.main-navigation h1 {
+  display: none !important; }
+/* line 5, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/menus */
+.main-navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  white-space: nowrap; }
+  /* line 11, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/menus */
+  .main-navigation ul li {
+    cursor: pointer;
+    list-style: none;
+    display: block;
+    position: relative;
+    padding: 0
+    /* switch symbol for showing child */
+    /* nav child menu */
+    /* show child */ }
+    /* line 17, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/menus */
+    .main-navigation ul li a {
+      display: inline-block; }
+    /* line 21, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/menus */
+    .main-navigation ul li span {
+      display: inline-block;
+      text-align: right;
+      width: 1.4em;
+      padding-right: 0.5em;
+      margin-left: 0.5em;
+      margin-right: -0.5em; }
+    /* line 30, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/menus */
+    .main-navigation ul li ul {
+      display: none;
+      padding: 0;
+      margin: 0; }
+    /* line 36, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/menus */
+    .main-navigation ul li ul.childopen {
+      display: block; }
+
+/* expanded nav menu */
+@media (min-width: 72.433900206rem) {
+  /* line 46, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/menus */
+  .navicon {
+    display: none; }
+
+  /* line 50, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/menus */
+  .navmenu {
+    display: block; }
+
+  /* line 54, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/menus */
+  .main-navigation ul {
+    float: right;
+    display: inline-table; }
+    /* line 58, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/menus */
+    .main-navigation ul li {
+      float: left
+      /* expanded nav child menu */ }
+      /* line 60, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/menus */
+      .main-navigation ul li a {
+        padding: 1.618rem; }
+      /* line 64, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/menus */
+      .main-navigation ul li ul {
+        position: absolute;
+        z-index: 9999;
+        top: 100%;
+        left: 0;
+        background-color: #eae5e1;
+        border: 0.0625rem solid #e8e0da;
+        border-bottom: 0;
+        box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1); }
+        /* line 70, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/menus */
+        .main-navigation ul li ul li {
+          float: none; }
+          /* line 72, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/menus */
+          .main-navigation ul li ul li a {
+            width: 100%;
+            line-height: 4.5rem;
+            padding: 0 2.1875rem; }
+          /* line 264, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+          .main-navigation ul li ul li a, .main-navigation ul li ul li a:link, .main-navigation ul li ul li a:visited {
+            border: 0;
+            border-top: 0.0625rem solid #e4dbd4; }
+          /* line 268, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+          .main-navigation ul li ul li a:hover {
+            background-color: #ece9e5; }
+ }
+
+/* collapsed nav menu */
+@media (max-width: 72.433900206rem) {
+  /* line 88, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/menus */
+  .navicon {
+    float: right;
+    font-size: 1.65rem;
+    line-height: 2.8125rem;
+    text-align: center;
+    width: 3.375rem;
+    margin: 0.9375rem;
+    cursor: pointer; }
+
+  /* line 98, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/menus */
+  .main-navigation ul {
+    clear: left;
+    display: none
+    /* collapsed nav child menu */ }
+    /* line 101, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/menus */
+    .main-navigation ul.show {
+      display: block; }
+    /* line 105, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/menus */
+    .main-navigation ul li a {
+      width: 100%;
+      line-height: 4.5rem;
+      padding: 0 2.1875rem;
+      border-top: 0.0625rem solid #e8e0da; }
+      /* line 275, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+      .main-navigation ul li a:hover {
+        border-bottom-color: transparent;
+        background-color: #eae5e1; }
+    /* line 113, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/menus */
+    .main-navigation ul ul {
+      position: relative;
+      left: 0;
+      background-color: #e9e3dd; }
+      /* line 117, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/menus */
+      .main-navigation ul ul li a {
+        border-top: 0.0625rem solid #e4dbd4; }
+        /* line 287, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+        .main-navigation ul ul li a:hover {
+          border-bottom-color: transparent;
+          background-color: #e7e0da; }
+ }
+
+/* line 127, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/menus */
+.site-main .comment-navigation, .site-main .posts-navigation, .site-main .post-navigation {
+  margin: 0 0 1.5em;
+  overflow: hidden; }
+
+/* line 134, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/menus */
+.comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous {
+  float: left;
+  width: 50%; }
+
+/* line 141, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/navigation/menus */
+.comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%; }
+
+/*--------------------------------------------------------------
+6.0 Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+/* line 2, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/modules/accessibility */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+  /* line 11, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/modules/accessibility */
+  .screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000
+    /* Above WP toolbar. */ }
+
+/*--------------------------------------------------------------
+7.0 Alignments
+--------------------------------------------------------------*/
+/* line 1, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/modules/alignments */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em; }
+
+/* line 7, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/modules/alignments */
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em; }
+
+/* line 13, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/modules/alignments */
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/*--------------------------------------------------------------
+8.0 Clearings
+--------------------------------------------------------------*/
+/* line 12, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/modules/clearings */
+.clear:before, .clear:after, .entry-content:before, .entry-content:after, .comment-content:before, .comment-content:after, .site-header:before, .site-header:after, .site-content:before, .site-content:after, .site-footer:before, .site-footer:after {
+  content: "";
+  display: table; }
+
+/* line 21, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/modules/clearings */
+.clear:after, .entry-content:after, .comment-content:after, .site-header:after, .site-content:after, .site-footer:after {
+  clear: both; }
+
+/*--------------------------------------------------------------
+9.0 Widgets
+--------------------------------------------------------------*/
+/* line 1, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/site/secondary/widgets */
+.widget {
+  margin: 0 0 1.5em
+  /* Make sure select elements fit in widgets. */ }
+  /* line 5, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/site/secondary/widgets */
+  .widget select {
+    max-width: 100%; }
+
+/* Search widget. */
+/* line 11, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/site/secondary/widgets */
+.widget_search .search-submit {
+  display: none; }
+
+/*--------------------------------------------------------------
+10.0 Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+10.1 Posts and pages
+--------------------------------------------------------------*/
+/* line 1, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/site/primary/posts-and-pages */
+.sticky {
+  display: block; }
+
+/* line 5, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/site/primary/posts-and-pages */
+.hentry {
+  margin: 0 0 1.5em; }
+
+/* line 10, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/site/primary/posts-and-pages */
+.byline, .updated:not(.published) {
+  display: none; }
+
+/* line 15, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/site/primary/posts-and-pages */
+.single .byline, .group-blog .byline {
+  display: inline; }
+
+/* line 21, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/site/primary/posts-and-pages */
+.page-content, .entry-content, .entry-summary {
+  margin: 1.5em 0 0; }
+
+/* line 25, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/site/primary/posts-and-pages */
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em; }
+
+/*--------------------------------------------------------------
+10.2 Asides
+--------------------------------------------------------------*/
+/* line 2, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/site/primary/asides */
+.blog .format-aside .entry-title, .archive .format-aside .entry-title {
+  display: none; }
+
+/*--------------------------------------------------------------
+10.3 Comments
+--------------------------------------------------------------*/
+/* line 1, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/site/primary/comments */
+.comment-content a {
+  word-wrap: break-word; }
+
+/* line 4, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/site/primary/comments */
+.bypostauthor {
+  display: block; }
+
+/*--------------------------------------------------------------
+11.0 Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+/* line 3, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/modules/infinite-scroll */
+.infinite-scroll .posts-navigation, .infinite-scroll.neverending .site-footer {
+  /* Theme Footer (when set to scrolling) */
+  display: none; }
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+/* line 8, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/modules/infinite-scroll */
+.infinity-end.neverending .site-footer {
+  display: block; }
+
+/*--------------------------------------------------------------
+12.0 Media
+--------------------------------------------------------------*/
+/* line 3, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/media/media */
+.page-content .wp-smiley, .entry-content .wp-smiley, .comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0; }
+
+/* Make sure embeds and iframes fit their containers. */
+/* line 13, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/media/media */
+embed, iframe, object {
+  max-width: 100%; }
+
+/*--------------------------------------------------------------
+12.1 Captions
+--------------------------------------------------------------*/
+/* line 1, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/media/captions */
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%; }
+  /* line 5, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/media/captions */
+  .wp-caption img[class*="wp-image-"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+  /* line 9, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/media/captions */
+  .wp-caption .wp-caption-text {
+    margin: 0.8075em 0; }
+
+/* line 14, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/media/captions */
+.wp-caption-text {
+  text-align: center; }
+
+/*--------------------------------------------------------------
+12.2 Galleries
+--------------------------------------------------------------*/
+/* line 1, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/media/galleries */
+.gallery {
+  margin-bottom: 1.5em; }
+
+/* line 5, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/media/galleries */
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%; }
+
+/* line 12, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/media/galleries */
+.gallery-columns-2 .gallery-item {
+  max-width: 50%; }
+
+/* line 16, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/media/galleries */
+.gallery-columns-3 .gallery-item {
+  max-width: 33.33%; }
+
+/* line 20, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/media/galleries */
+.gallery-columns-4 .gallery-item {
+  max-width: 25%; }
+
+/* line 24, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/media/galleries */
+.gallery-columns-5 .gallery-item {
+  max-width: 20%; }
+
+/* line 28, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/media/galleries */
+.gallery-columns-6 .gallery-item {
+  max-width: 16.66%; }
+
+/* line 32, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/media/galleries */
+.gallery-columns-7 .gallery-item {
+  max-width: 14.28%; }
+
+/* line 36, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/media/galleries */
+.gallery-columns-8 .gallery-item {
+  max-width: 12.5%; }
+
+/* line 40, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/media/galleries */
+.gallery-columns-9 .gallery-item {
+  max-width: 11.11%; }
+
+/* line 44, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/media/galleries */
+.gallery-caption {
+  display: block; }
+
+/*--------------------------------------------------------------
+CUSTOM STYLES
+--------------------------------------------------------------*/
+/* line 1, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+* {
+  box-sizing: border-box;
+  word-wrap: break-word; }
+
+/* line 6, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+body {
+  border-top: 0.125rem solid #DFD8CF;
+  background-color: #ebe8e5; }
+
+/* line 152, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+a {
+  text-decoration: none;
+  border-bottom: 1px dotted transparent; }
+
+/* line 156, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+a:hover, a:active {
+  border-bottom: 1px dotted #7b6e62; }
+
+/* line 12, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+blockquote {
+  padding: 1.618rem;
+  font-size: 1.25rem;
+  background-color: #ebe8e5;
+  border: 0.0625rem solid #e8e0da;
+  color: #76624e; }
+  /* line 165, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  blockquote a, blockquote a:visited, blockquote a:active {
+    color: inherit; }
+
+/* line 19, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+ul, ol {
+  padding: 0;
+  margin: 0 0 1.618em 1.618em; }
+
+/* line 81, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Raleway, "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  line-height: 1.313em;
+  font-weight: 300; }
+
+/* line 87, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+h1 {
+  font-size: 3em;
+  margin: 0.563em 0; }
+
+/* line 87, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+h2 {
+  font-size: 2.25em;
+  margin: 0.625em 0; }
+
+/* line 87, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+h3 {
+  font-size: 1.5em;
+  margin: 1.313em 0; }
+
+/* line 87, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+h4 {
+  font-size: 1.313em;
+  margin: 1.313em 0; }
+
+/* line 87, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+h5 {
+  font-size: 1.125em;
+  margin: 1.313em 0; }
+
+/* line 87, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+h6 {
+  font-size: 1em;
+  margin: 0.75em 0; }
+
+/* line 95, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+.widget-title {
+  font-size: 1.313em; }
+
+/* line 28, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.content-area {
+  float: left;
+  margin: 0 -30% 0 0;
+  width: 100%; }
+
+/* line 34, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.site-main {
+  margin: 0 30% 0 0; }
+
+/* line 38, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.site-content .widget-area {
+  float: right;
+  overflow: hidden;
+  width: 30%; }
+
+/* line 44, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.site-footer {
+  clear: both;
+  width: 100%; }
+
+/* line 54, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.site {
+  padding-top: 0.809rem; }
+
+/* line 59, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.site-header {
+  max-width: 72.433900206rem;
+  margin: 0.809rem auto 1.618rem auto;
+  background-color: #ebe8e5;
+  border: 0.0625rem solid #e8e0da;
+  box-shadow: inset 0 0.125rem 0.3125rem rgba(194, 188, 184, 0.1);
+  color: #76624e; }
+  /* line 181, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  .site-header a, .site-header a:visited, .site-header a:active {
+    color: inherit; }
+
+/* line 66, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.site-branding {
+  padding-left: 1.618rem;
+  padding-top: 1.618rem;
+  padding-bottom: 1.618rem;
+  font-size: 0.5em;
+  float: left; }
+
+/* line 74, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.site-title {
+  font-weight: 700; }
+
+/* line 78, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.site-title, .site-description {
+  margin: 0;
+  line-height: 1em;
+  display: inline-block;
+  vertical-align: bottom; }
+
+/* line 85, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.site-description {
+  margin-left: 0.5em;
+  font-style: italic; }
+
+/* line 91, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.site-content {
+  max-width: 72.433900206rem;
+  margin: 1.618rem auto 0 auto; }
+
+/* line 100, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.hentry, .comments-area, .page-header, .site-main .posts-navigation, .site-main .post-navigation, .paging-navigation {
+  padding-left: 4.235801032rem;
+  padding-right: 4.235801032rem;
+  padding-top: 2.617924rem;
+  padding-bottom: 2.617924rem;
+  margin: 0 0 1.618rem 0;
+  background-color: #fff;
+  border: 0.0625rem solid #DFD8CF;
+  box-shadow: 0 0.0625rem 0.0625rem rgba(33, 19, 4, 0.07); }
+
+/* line 110, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.sticky {
+  border-width: 0.4375rem;
+  border-color: #ebe8e5;
+  box-shadow: 0 0.1875rem 0.375rem rgba(33, 19, 4, 0.15); }
+
+/* line 114, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.post-thumbnail {
+  margin-top: 1.618rem;
+  margin-right: -4.235801032rem;
+  margin-bottom: 1.618rem;
+  margin-left: -4.235801032rem;
+  border-top: 0.625rem solid #7b6e62;
+  border-bottom: 0.625rem solid #7b6e62; }
+  /* line 119, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+  .post-thumbnail img {
+    min-width: 100%;
+    vertical-align: bottom; }
+
+/* line 127, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.page-header .page-title {
+  text-align: center; }
+
+/* line 134, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.entry-content a img {
+  vertical-align: bottom; }
+/* line 206, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+.entry-content a, .entry-content a:link, .entry-content a:visited {
+  border-bottom: 0.0625rem dotted #7B6048;
+  background-color: #efedeb;
+  color: #505050; }
+/* line 211, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+.entry-content a:hover, .entry-content a:active {
+  background-color: #ebe8e5; }
+
+/* line 142, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.entry-header {
+  text-align: center; }
+
+/* line 146, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.entry-title {
+  margin-top: 0;
+  margin-bottom: 2.617924rem; }
+
+/* line 151, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.entry-meta {
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: 300;
+  padding: 0.8em 1.2em;
+  margin-bottom: 1.618rem;
+  background-color: #7b6e62;
+  color: #fff; }
+  /* line 197, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  .entry-meta a, .entry-meta a:visited, .entry-meta a:active {
+    color: inherit; }
+  /* line 200, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  .entry-meta a:hover, .entry-meta a:active {
+    border-bottom: 1px dotted #fff; }
+
+/* line 160, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.continue_btn {
+  text-align: center; }
+
+/* line 165, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.entry-content a.more-link {
+  font-size: 1.125rem;
+  font-weight: 700;
+  display: inline-block;
+  padding: 1em 1.618em;
+  margin: 2em 0 0.5em 0;
+  background: none;
+  border-top: 0.1875rem solid #e8e1db;
+  border-bottom: 0.1875rem solid #e8e1db;
+  color: #7b6e62; }
+  /* line 171, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+  .entry-content a.more-link:before {
+    font-family: "FontAwesome";
+    content: "\f0a4";
+    margin-right: 0.5em; }
+  /* line 176, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+  .entry-content a.more-link:after {
+    font-family: "FontAwesome";
+    content: "\f0a5";
+    margin-left: 0.5em; }
+
+/* line 185, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.entry-footer {
+  text-align: center;
+  margin: 2.617924rem 0 1.618rem 0;
+  line-height: 3em;
+  color: #7b6e62;
+  border-bottom: 0.125rem solid #e8e1db; }
+  /* line 189, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+  .entry-footer span {
+    margin: 0 0.618em;
+    padding: 0 0.618em;
+    display: inline-block; }
+  /* line 219, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  .entry-footer span {
+    border-top: 0.125rem solid #e8e1db; }
+
+/* line 197, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.comment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  /* line 201, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+  .comment-list .comment {
+    padding: 1.618rem;
+    background-color: rgba(221, 193, 174, 0.05);
+    border: 0.0625rem solid rgba(108, 67, 38, 0.05);
+    box-shadow: inset 0 0.125rem 0.3125rem rgba(194, 188, 184, 0.05); }
+
+/* line 211, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.cat-links:before {
+  font-family: "FontAwesome";
+  content: "\f07c";
+  margin-right: 0.5em; }
+
+/* line 217, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.tags-links:before {
+  font-family: "FontAwesome";
+  content: "\f02c";
+  margin-right: 0.5em; }
+
+/* line 223, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.comments-link:before {
+  font-family: "FontAwesome";
+  content: "\f075";
+  margin-right: 0.5em; }
+
+/* line 229, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.edit-link:before {
+  font-family: "FontAwesome";
+  content: "\f040";
+  margin-right: 0.5em; }
+
+/* line 237, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.widget {
+  padding-left: 2.617924rem;
+  padding-right: 2.617924rem;
+  padding-top: 2.617924rem;
+  padding-bottom: 2.617924rem;
+  margin-left: 1.618rem;
+  margin-bottom: 1.618rem;
+  background-color: #ebe8e5;
+  border: 0.0625rem solid #e8e0da;
+  box-shadow: inset 0 0.125rem 0.3125rem rgba(194, 188, 184, 0.1);
+  color: #76624e; }
+  /* line 181, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  .widget a, .widget a:visited, .widget a:active {
+    color: inherit; }
+
+/* line 248, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.widget ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  /* line 252, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+  .widget ul li {
+    padding: 1em 0 1em 2em;
+    border-bottom: 0.0625rem solid #e8e0da; }
+    /* line 255, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+    .widget ul li.page_item_has_children, .widget ul li.menu-item-has-children {
+      padding-bottom: 0;
+      border: none; }
+    /* line 260, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+    .widget ul li:before {
+      margin-left: -2em;
+      margin-right: 1em;
+      font-family: "FontAwesome";
+      content: "\f02e"; }
+    /* line 267, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+    .widget ul li li li li {
+      padding-left: 0; }
+  /* line 271, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+  .widget ul .children li:first-of-type, .widget ul .sub-menu li:first-of-type {
+    margin-top: 1em;
+    border-top: 0.0625rem solid #e8e0da; }
+
+/* line 278, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+input.search-field {
+  box-sizing: border-box;
+  width: 100%; }
+
+/* line 285, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.aboveheader {
+  max-width: 72.433900206rem;
+  margin: 0 auto;
+  text-align: right;
+  font-size: 1.25rem; }
+  /* line 290, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+  .aboveheader a {
+    margin-right: 0.618em; }
+    /* line 292, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+    .aboveheader a:link, .aboveheader a:visited {
+      opacity: 0.75; }
+    /* line 295, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+    .aboveheader a:hover, .aboveheader a:active {
+      opacity: 1; }
+
+/* line 303, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.abovecontent {
+  max-width: 72.433900206rem;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 0.0625rem solid #DFD8CF;
+  box-shadow: 0 0.0625rem 0.0625rem rgba(33, 19, 4, 0.07); }
+
+/* line 312, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.widget_recent_comments ul li:before {
+  content: "\f075"; }
+
+/* line 318, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.widget_archive ul li:before {
+  content: "\f187"; }
+
+/* line 324, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.widget_categories ul li:before {
+  content: "\f07c"; }
+
+/* line 330, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.widget_pages ul li:before, .widget_nav_menu ul li:before {
+  content: "\f15c"; }
+/* line 334, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.widget_pages ul .children li:before, .widget_pages ul .sub-menu li:before, .widget_nav_menu ul .children li:before, .widget_nav_menu ul .sub-menu li:before {
+  content: "\f101"; }
+/* line 339, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.widget_pages ul .children .children li:before, .widget_pages ul .sub-menu .sub-menu li:before, .widget_nav_menu ul .children .children li:before, .widget_nav_menu ul .sub-menu .sub-menu li:before {
+  content: "\f105"; }
+
+/* line 346, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+.site-footer {
+  padding-top: 1.618em;
+  padding-bottom: 1.618em;
+  max-width: 72.433900206rem;
+  margin: 0 auto; }
+  /* line 237, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  .site-footer a {
+    color: #6d6157; }
+
+@media (max-width: 72.433900206rem) {
+  /* line 81, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Raleway, "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    line-height: 1.313em;
+    font-weight: 300; }
+
+  /* line 87, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  h1 {
+    font-size: 2.7em;
+    margin: 0.563em 0; }
+
+  /* line 87, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  h2 {
+    font-size: 2.025em;
+    margin: 0.625em 0; }
+
+  /* line 87, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  h3 {
+    font-size: 1.35em;
+    margin: 1.313em 0; }
+
+  /* line 87, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  h4 {
+    font-size: 1.1817em;
+    margin: 1.313em 0; }
+
+  /* line 87, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  h5 {
+    font-size: 1.0125em;
+    margin: 1.313em 0; }
+
+  /* line 87, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  h6 {
+    font-size: 1em;
+    margin: 0.75em 0; }
+
+  /* line 95, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  .widget-title {
+    font-size: 1.1817em; }
+
+  /* line 376, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+  .hentry, .comments-area, .page-header, .site-main .posts-navigation, .site-main .post-navigation, .paging-navigation {
+    padding-left: 2.617924rem;
+    padding-right: 2.617924rem;
+    padding-top: 1.618rem;
+    padding-bottom: 1.618rem; }
+
+  /* line 383, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+  .post-thumbnail {
+    margin-top: 1.618rem;
+    margin-right: -2.617924rem;
+    margin-bottom: 1.618rem;
+    margin-left: -2.617924rem; }
+
+  /* line 390, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+  .entry-title {
+    margin-bottom: 1.618rem; }
+
+  /* line 394, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+  .site-footer {
+    padding: 1.618em; }
+ }
+
+@media (max-width: 56.25rem) {
+  /* line 403, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+  .content-area {
+    float: none;
+    margin: 0;
+    width: 100%; }
+
+  /* line 409, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+  .site-main {
+    margin: 0; }
+
+  /* line 413, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+  .site-content .widget-area {
+    float: none;
+    overflow: hidden;
+    width: 100%; }
+
+  /* line 419, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+  .widget {
+    margin-left: 0;
+    margin-bottom: 1.618rem; }
+ }
+
+@media (max-width: 37.5rem) {
+  /* line 81, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Raleway, "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    line-height: 1.313em;
+    font-weight: 300; }
+
+  /* line 87, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  h1 {
+    font-size: 2.4em;
+    margin: 0.563em 0; }
+
+  /* line 87, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  h2 {
+    font-size: 1.8em;
+    margin: 0.625em 0; }
+
+  /* line 87, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  h3 {
+    font-size: 1.2em;
+    margin: 1.313em 0; }
+
+  /* line 87, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  h4 {
+    font-size: 1.0504em;
+    margin: 1.313em 0; }
+
+  /* line 87, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  h5 {
+    font-size: 1em;
+    margin: 1.313em 0; }
+
+  /* line 87, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  h6 {
+    font-size: 1em;
+    margin: 0.75em 0; }
+
+  /* line 95, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  .widget-title {
+    font-size: 1.0504em; }
+ }
+
+@media (max-width: 25rem) {
+  /* line 81, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Raleway, "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    line-height: 1.313em;
+    font-weight: 300; }
+
+  /* line 87, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  h1 {
+    font-size: 2.1em;
+    margin: 0.563em 0; }
+
+  /* line 87, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  h2 {
+    font-size: 1.575em;
+    margin: 0.625em 0; }
+
+  /* line 87, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  h3 {
+    font-size: 1.05em;
+    margin: 1.313em 0; }
+
+  /* line 87, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  h4 {
+    font-size: 1em;
+    margin: 1.313em 0; }
+
+  /* line 87, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  h5 {
+    font-size: 1em;
+    margin: 1.313em 0; }
+
+  /* line 87, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  h6 {
+    font-size: 1em;
+    margin: 0.75em 0; }
+
+  /* line 95, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_vars_mixins */
+  .widget-title {
+    font-size: 1em; }
+
+  /* line 452, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+  .hentry, .comments-area, .page-header, .site-main .posts-navigation, .site-main .post-navigation, .paging-navigation {
+    padding-left: 1.618rem;
+    padding-right: 1.618rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+
+  /* line 459, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+  .post-thumbnail {
+    margin-top: 1.618rem;
+    margin-right: -1.618rem;
+    margin-bottom: 1.618rem;
+    margin-left: -1.618rem; }
+
+  /* line 466, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+  .entry-title {
+    margin-bottom: 1rem; }
+
+  /* line 470, /Applications/wordpress-4.1-0/apps/wordpress/htdocs/wp-content/themes/wp-beirut/sass/custom/custom_styles */
+  .widget {
+    padding-left: 1.618rem;
+    padding-right: 1.618rem;
+    padding-top: 1.618rem;
+    padding-bottom: 1.618rem; }
+ }
