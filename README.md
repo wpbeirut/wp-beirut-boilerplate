@@ -9,9 +9,9 @@ to install the boilerplate you need to do the following.
 	3. `git clone https://github.com/wpbeirut/wp-beirut-boilerplate.git staging` or
 	4. `git clone https://github.com/wpbeirut/wp-beirut-boilerplate.git production` or
 2. since we need a latest version only without history versions of wordpress or plugins. (first line is recomended, others 2 are optionals).
-	1. inside the cloned repository add the following lines `git clone add git://github.com/Wordpress/WordPress.git public_html/core`
-	2. `git clone https://github.com/woocommerce/woocommerce.git public_html/content/plugins/woocommerce`
-	3. `git clone https://github.com/Automattic/jetpack.git public_html/plugin/jetpack`
+	1. inside the cloned repository add the following lines `git clone git://github.com/Wordpress/WordPress.git --branch master --single-branch public_html/core`
+	2. `git clone https://github.com/woocommerce/woocommerce.git --branch master --single-branch public_html/content/plugins/woocommerce`
+	3. `git clone https://github.com/Automattic/jetpack.git --branch master --single-branch public_html/plugin/jetpack`
 
 3. after cloning the repositories, we need to install wordpress to do so
 	1. run the site as exmaple: http://localhost/wp-beirut-boilerplate/public_html/core/

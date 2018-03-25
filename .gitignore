@@ -1,7 +1,3 @@
 /wp-beirut-config/env/wp-beirut-dev.php
 /wp-beirut-config/env/wp-beirut-stg.php
 /wp-beirut-config/env/wp-beirut-prd.php
-.gitmodules
-/public_html/core
-/public_html/content/plugins/woocommerce
-/public_html/content/plugins/jetpack
