@@ -8,7 +8,7 @@ to install the boilerplate you need to do the following.
 	2. `git clone https://github.com/wpbeirut/wp-beirut-boilerplate.git development` or
 	3. `git clone https://github.com/wpbeirut/wp-beirut-boilerplate.git staging` or
 	4. `git clone https://github.com/wpbeirut/wp-beirut-boilerplate.git production` or
-2.  end the cloned repository and do the following commands.
+2.  enter the cloned repository and do the following commands.
 	1. git submodule init
 	2. git submodule update
 
