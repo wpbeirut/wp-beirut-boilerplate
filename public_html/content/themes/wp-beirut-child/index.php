@@ -80,6 +80,81 @@
 							</div>
 						</div>
 
+						<div class="row">
+							<div class="cell" data-title="Full Name">
+								Ahmad Farhat
+							</div>
+							<div class="cell" data-title="Age">
+								-
+							</div>
+							<div class="cell" data-title="Job Title">
+								Software Developer
+							</div>
+							<div class="cell" data-title="Location">
+								Beirut
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="Full Name">
+								Arij Shahla
+							</div>
+							<div class="cell" data-title="Age">
+								30
+							</div>
+							<div class="cell" data-title="Job Title">
+								 Full Stack Developer
+							</div>
+							<div class="cell" data-title="Location">
+								Maamoura
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="Full Name">
+								Mohamad El Amin
+							</div>
+							<div class="cell" data-title="Age">
+								28
+							</div>
+							<div class="cell" data-title="Job Title">
+								Modern Full Stack Developer
+							</div>
+							<div class="cell" data-title="Location">
+								Mazraa
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="Full Name">
+								Majida Khalifeh
+							</div>
+							<div class="cell" data-title="Age">
+								50
+							</div>
+							<div class="cell" data-title="Job Title">
+								Directrice d'education 
+							</div>
+							<div class="cell" data-title="Location">
+								Saida
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="cell" data-title="Full Name">
+								Christian Holzl
+							</div>
+							<div class="cell" data-title="Age">
+								53
+							</div>
+							<div class="cell" data-title="Job Title">
+								Consultant
+							</div>
+							<div class="cell" data-title="Location">
+								Ghazir -Jounyeh
+							</div>
+						</div>
+
 
 					</div>
 			</div>
