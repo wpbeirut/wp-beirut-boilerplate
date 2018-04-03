@@ -35,4 +35,4 @@ woocommerce with jetpack ready for activation in the boilerplate.
 
 
 also for more information on how to install the boilerplate, you can watch the video demo
-https://youtu.be/H0DSug1Q0kI
+https://youtu.be/WOf4-iQ3C1M
