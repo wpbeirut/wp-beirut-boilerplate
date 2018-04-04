@@ -1,6 +1,11 @@
 # wp-beirut-boilerplate
 A Startup Boileplate for Wordpress Beirut Community
 
+for more information on how to install the boilerplate, you can watch the video demo
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=WOf4-iQ3C1M"><img src="https://img.youtube.com/vi/WOf4-iQ3C1M/0.jpg" width="100%" alt="Wordpress Beirut Boilerplate" target="_blank"></a>
+</div>
+
 to install the boilerplate you need to do the following.
 
 1. clone the repository using the following command.
@@ -32,9 +37,3 @@ define( 'WP_DEBUG', true );`
 after these steps you can login to the back end using the full url with /core/wp-admin
 you will see in the themes, wp-beirut theme, and a wp-beirut child themes, also in the plugins
 woocommerce with jetpack ready for activation in the boilerplate.
-
-
-also for more information on how to install the boilerplate, you can watch the video demo
-<div align="center">
-  <a href="https://www.youtube.com/watch?v=WOf4-iQ3C1M"><img src="https://img.youtube.com/vi/WOf4-iQ3C1M/0.jpg" alt="Wordpress Beirut Boilerplate"></a>
-</div>
