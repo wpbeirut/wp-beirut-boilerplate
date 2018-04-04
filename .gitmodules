@@ -1,3 +1,6 @@
 [submodule "public_html/core"]
 	path = public_html/core
 	url = https://github.com/wpbeirut/wpbeirut-core.git
+[submodule "public_html/content/plugins"]
+	path = public_html/content/plugins
+	url = https://github.com/wpbeirut/wp-beirut-plugins.git
