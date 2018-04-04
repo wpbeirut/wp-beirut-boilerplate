@@ -3,7 +3,7 @@ A Startup Boileplate for Wordpress Beirut Community
 
 for more information on how to install the boilerplate, you can watch the video demo
 <div align="center">
-  <a href="https://www.youtube.com/watch?v=WOf4-iQ3C1M"  target="_blank"><img src="https://img.youtube.com/vi/WOf4-iQ3C1M/0.jpg" width="100%" alt="Wordpress Beirut Boilerplate"></a>
+  <a target="_blank" href="https://www.youtube.com/watch?v=WOf4-iQ3C1M"><img src="https://img.youtube.com/vi/WOf4-iQ3C1M/0.jpg" width="100%" alt="Wordpress Beirut Boilerplate"></a>
 </div>
 
 to install the boilerplate you need to do the following.
